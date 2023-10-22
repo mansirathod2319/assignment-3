@@ -1,0 +1,17 @@
+<p>display-combo works!</p>
+<h2>Display Combo</h2>
+<select [(ngModel)]="selectedItem">
+  <option *ngFor="let item of comboData" [value]="item">{{ item }}</option>
+</select>
+<p *ngIf="selectedItem">Selected Item: {{ selectedItem }}</p>
+
+<h2>Display Combo</h2>
+<select [(ngModel)]="selectedItem">
+  <option *ngFor="let item of comboData" [value]="item">{{ item }}</option>
+</select>
+<div *ngIf="selectedItem === 'Textbox'">
+  <input type="text" [(ngModel)]="textInput" placeholder="Enter text">
+</div>
+<div *ngIf="selectedItem === 'Textarea'">
+  <textarea [(ngModel)]="textareaInput" placeholder="Enter text"></textarea>
+</div>
